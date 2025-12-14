@@ -11,53 +11,13 @@ The system combines **semantic search** over a structured CSV dataset with **LLM
 - Natural language search for schools & colleges in Nepal
 - Supports queries like:
   - Schools offering **NEB**
-  - Plus Two colleges with **A Levels**
-  - Colleges offering **CS/IT**
+  - +2 colleges with **A Levels**
   - Schools with **hostel facilities**
 - Retrieval-Augmented Generation (RAG) architecture
 - Persistent vector database using **ChromaDB**
 - Backend API built with **FastAPI**
 - Frontend UI built with **Streamlit**
 - Uses **AWS Bedrock** for embeddings and LLM
-
----
-
-## 🏗️ System Architecture
-
-User (Streamlit UI)
-↓
-FastAPI Backend
-↓
-RAG Pipeline (LangChain)
-↓
-ChromaDB (Vector Store)
-↓
-AWS Bedrock (LLM + Embeddings)
-
----
-
-## 📂 Project Structure
-
-school-finder-rag/
-│
-├── backend/
-│ ├── main.py # FastAPI app
-│ ├── rag_pipeline.py # RAG logic
-│ └── requirements.txt
-│
-├── frontend/
-│ ├── app.py # Streamlit UI
-│ └── requirements.txt
-│
-├── data/
-│ └── schools.csv # Dataset
-│
-├── db/
-│ └── chroma/ # Persisted vector store
-│
-├── .env # AWS credentials (not committed)
-├── README.md
-└── .gitignore
 
 ---
 
@@ -107,13 +67,11 @@ streamlit run app.py
 ### 🔹 Query Schools / Colleges
 
 **Endpoint**
-
 POST /query
 
 **Description**  
 Accepts a natural language query and returns an AI-generated answer using a Retrieval-Augmented Generation (RAG) pipeline over the school/college dataset.
 
----
 
 **Request Body**
 ```
