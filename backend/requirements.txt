@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+langchain
+langchain-community
+langchain-text-splitters
+langchain-aws
+langchain-chroma
+chromadb
+boto3
+pandas
+python-dotenv
