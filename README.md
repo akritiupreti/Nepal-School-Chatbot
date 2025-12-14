@@ -67,6 +67,7 @@ streamlit run app.py
 ### 🔹 Query Schools / Colleges
 
 **Endpoint**
+
 POST /query
 
 **Description**  
